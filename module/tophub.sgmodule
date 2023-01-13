@@ -1,0 +1,9 @@
+#!name=今日热榜
+#!desc=CrackPro
+#仅供自用，感谢@小白脸大佬的脚本！
+
+[MITM]
+hostname = %APPEND% *tophub.app
+
+[Script]
+今日热榜 = type=http-response,pattern=^https?:\/\/api2\.tophub\.app\/account\/sync\?.*,requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/shmaoo/stewart/master/JavaScript/tophub.js

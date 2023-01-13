@@ -1,0 +1,9 @@
+#!name=notability
+#!desc=CrackPro
+#仅供自用，感谢@PoetryU大佬的脚本！
+
+[MITM]
+hostname = %APPEND% notability.com
+
+[Script]
+Notability VIP = type=http-response,pattern=https:\/\/notability\.com\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/notabilityvip.js,script-update-interval=0

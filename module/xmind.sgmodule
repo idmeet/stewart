@@ -1,0 +1,9 @@
+#!name=xmind
+#!desc=CrackPro
+#仅供自用，感谢@langkhach270389大佬的脚本！
+
+[MITM]
+hostname = %APPEND% www.xmind.net, www.xmind.cn
+
+[Script]
+xmind = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/sub),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/xmind.js,script-update-interval=0

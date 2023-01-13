@@ -1,0 +1,9 @@
+#!name=知音漫客
+#!desc=CrackPro
+#感谢@NobyDa大佬的脚本！
+
+[MITM]
+hostname = %APPEND% apigate.zymk.cn
+
+[Script]
+知音漫客 = type=http-response,pattern=^https:\/\/apigate\.zymk\.cn\/(zymk-getuserinfo-api\/v1\/getuserinfo|zymk-userpurchased-api\/v1\/userpurchased\/paychapters)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Zymh.js,script-update-interval=0
