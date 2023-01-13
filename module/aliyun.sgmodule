@@ -1,0 +1,10 @@
+#!name=阿里云盘
+#!desc=使用fileball软件挂载阿里云盘
+#仅限自用，感谢@小白脸大佬的脚本！
+[General]
+force-http-engine-hosts= %APPEND% aliyun.example.com:0
+
+[MITM]
+hostname = %APPEND% aliyun.example.com
+[Script]
+aliyun = type=http-request,pattern=^http:\/\/aliyun\.example\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shmaoo/stewart/master/JavaScript/aliyun.js

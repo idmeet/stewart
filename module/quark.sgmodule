@@ -1,0 +1,10 @@
+#!name=quark云盘
+#!desc=使用fileball软件挂载quark
+#仅限自用，感谢@小白脸大佬的脚本！
+[General]
+force-http-engine-hosts= %APPEND% quark.example.com:0
+
+[MITM]
+hostname = %APPEND% quark.example.com
+[Script]
+quark = type=http-request,pattern=^http:\/\/quark\.example\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shmaoo/stewart/master/JavaScript/quark.js
